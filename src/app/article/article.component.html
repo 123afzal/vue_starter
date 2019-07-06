@@ -1,0 +1,62 @@
+<!--<div class="four wide column center aligned votes ant-row">-->
+  <!--<div class="ui statistic">-->
+    <!--<div class="value">-->
+      <!--{{ votes }}-->
+    <!--</div>-->
+    <!--<div class="label">-->
+      <!--Points-->
+    <!--</div>-->
+  <!--</div>-->
+<!--</div>-->
+<!--<div class="twelve wide column">-->
+  <!--<a class="ui large header" href="{{ link }}">-->
+    <!--{{ title }}-->
+  <!--</a>-->
+  <!--<ul class="ui big horizontal list voters">-->
+    <!--<li class="item">-->
+      <!--<a href (click)="voteUp()">-->
+        <!--<i class="arrow up icon"></i>-->
+        <!--upvote-->
+      <!--</a>-->
+    <!--</li>-->
+    <!--<li class="item">-->
+      <!--<a href (click)="voteDown()">-->
+        <!--<i class="arrow down icon"></i>-->
+        <!--downvote-->
+      <!--</a>-->
+    <!--</li>-->
+  <!--</ul>-->
+<!--</div>-->
+
+<div  nz-col nzXs="8" nzSm="8" nzMd="8">
+  <nz-card style="background-color: #e1e1e1;">
+    <h1>{{article.votes}}</h1>
+    <p>POINTS</p>
+  </nz-card>
+
+</div>
+
+<div  nz-col nzXs="16" nzSm="16" nzMd="16" class="dir-metadata">
+  <nz-card>
+    <a [href]="article.link">
+      <h2>
+        {{article.title}}
+        <span class="meta">({{ article.domain() }})</span>
+      </h2>
+    </a>
+    <ul>
+      <li>
+        <a href (click)="voteUp()">
+          <i nz-icon nzType="arrow-up" nzTheme="outline"></i>
+          upvote
+        </a>
+      </li>
+      <li>
+        <a href (click)="voteDown()">
+          <i nz-icon nzType="arrow-down" nzTheme="outline"></i>
+          downvote
+        </a>
+      </li>
+    </ul>
+  </nz-card>
+</div>
