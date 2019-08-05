@@ -8,7 +8,7 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "deploy": "ng build --prod --base-href https://123afzal.github.io/my-angular-new/ && angular-cli-ghpages --branch gh-pages"
+    "deploy": "ngh --dir=dist\\my-angular-new --no-silent"
   },
   "private": true,
   "dependencies": {
